@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+body {
+    background-color: hsl(222, 26%, 31%);
+    position: relative;
+    height: 100vh;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    color: hsl(0, 0%, 100%);
+}
+
+.calc {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: .8rem;  
+}
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 1.5rem;
+}
+.theme-number {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2px;
+}
+
+
+.theme-text {
+    margin-left: 15rem;
+    margin-top: 1.1rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.theme-toggle {
+    background-color: hsl(6, 63%, 50%);
+    height: .95rem;
+    width: .95rem;
+    top: 14%;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#theme-one {
+    left: 10%;
+}
+
+#theme-two {
+    left: 36%;
+    opacity: 0;
+}
+
+#theme-three {
+    left: 66%;
+    opacity: 0;
+}
+
+
+.toggle {
+    background-color: hsl(224, 36%, 15%);
+    width: 4rem;
+    height: 1.4rem;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative
+}
+
+
+
+.display-container {
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 8px;
+    padding: 15px;
+    height: 8rem;
+    margin-bottom: 15px;
+    max-width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#display {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    overflow-x: scroll;
+    max-width: 100%;
+
+}
+
+#display::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator {
+    background-color: hsl(224, 36%, 15%);
+    display: grid;
+    grid-template-rows: 70px 70px 70px 70px 70px;
+    grid-template-columns: 100px 100px 100px 100px;
+    padding: 15px;
+    border-radius: 8px;
+    padding-bottom: 20px;
+    max-width: 430px;
+}
+
+.box {
+    background-color:hsl(0, 0%, 85%);
+    margin: 10px;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 15px;
+    color: hsl(221, 14%, 31%);
+    box-shadow: 0 4px hsl(0, 0%, 75%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.box:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#reset {
+    width: 180px;
+    grid-area: 5/ 1/ 5/ 2;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 4px hsl(224, 28%, 35%);
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+
+#reset:hover, #del:hover {
+    background-color: hsl(225, 27%, 62%);
+}
+
+
+#equals {
+    width: 180px;
+    grid-area: 5/ 3/ 5/ 4;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 4px hsl(6, 70%, 34%);
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+
+#equals:hover {
+    background-color: hsl(6, 75%, 60%);
+}
+
+#del {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 4px hsl(224, 28%, 35%);
+    font-size: 1.5rem;
+    padding-top: 15px;
+}
+
+/*************** FOR THEME TWO ***************/
+/*************** FOR THEME TWO ***************/
+/*************** FOR THEME TWO ***************/
+body.active2 {
+    background-color: hsl(0, 0%, 90%);
+}
+
+body.active2 .calculator {
+    background-color: hsl(0, 5%, 81%);
+}
+
+body.active2 .display-container {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 #display {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 .buttons {
+    background-color: hsl(0, 5%, 81%);
+}
+
+
+body.active2 .theme-text {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 .theme-number {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 #theme-one {
+    opacity: 0;
+}
+
+body.active2 #theme-two {
+    opacity: 1;
+}
+
+body.active2 .toggle {
+    background-color: hsl(0, 5%, 81%);
+}
+
+body.active2 .theme-toggle {
+    background-color: hsl(25, 90%, 55%);
+}
+
+body.active2 .calc {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 .box {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 .change {
+    background-color: hsl(0, 0%, 85%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 4px hsl(0, 0%, 75%);
+}
+
+body.active2.calc {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 button {
+    color: hsl(60, 10%, 19%);
+}
+
+body.active2 #del {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0 3px hsl(185, 58%, 25%)
+}
+
+body.active2 #del:hover {
+    background-color: hsl(185, 50%, 45%);
+}
+
+body.active2 #reset {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0 3px hsl(185, 58%, 25%);
+}
+
+body.active2 #reset:hover {
+    background-color: hsl(185, 50%, 45%);
+}
+
+body.active2 #equals {
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0 3px hsl(25, 99%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+body.active2 #equals:hover {
+    background-color: hsl(25, 90%, 55%);
+} 
+
+
+
+/*************** FOR THEME THREE ***************/
+/*************** FOR THEME THREE ***************/
+/*************** FOR THEME THREE ***************/
+
+
+body.active3 {
+    background-color: hsl(268, 75%, 9%);
+}
+body.active3 .calculator {
+    background-color: hsl(268, 71%, 12%);
+}
+
+body.active3 .display-container {
+    background-color: hsl(268, 71%, 12%);
+}
+
+body.active3 #display {
+    color: hsl(52, 100%, 62%);
+}
+
+
+body.active3 .equal {
+    background-color: hsl(176, 100%, 44%);
+    color: hsl(198, 20%, 13%);
+}
+
+body.active3 .calc {
+    color: hsl(52, 100%, 62%);
+}
+
+body.active3 .theme-number {
+    color: hsl(52, 100%, 62%);
+}
+
+body.active3 .theme-text {
+    color: hsl(52, 100%, 62%);
+}
+
+body.active3 #theme-one {
+    opacity: 0;
+}
+
+body.active3 #theme-three {
+    opacity: 1;
+}
+
+body.active3 .theme-toggle {
+    background-color: hsl(177, 92%, 70%);
+}
+
+
+body.active3 .box {
+    background-color: hsl(268, 47%, 21%);
+    color: hsl(52, 100%, 62%);
+    box-shadow: 0 3px hsl(290, 70%, 36%);
+}
+
+body.active3 .box:hover {
+    background-color: hsl(281, 89%, 26%);
+}
+
+body.active3 #del {
+    background-color: hsl(281, 89%, 26%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 3px  hsl(285, 91%, 52%);
+}
+
+body.active3 #del:hover {
+    background-color: hsl(281, 62%, 40%);
+}
+
+body.active3 #reset {
+    background-color: hsl(281, 89%, 26%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 3px hsl(285, 91%, 52%);
+}
+
+body.active3 #reset:hover {
+    background-color: hsl(281, 62%, 40%);
+}
+
+body.active3 #equals {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0 3px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+
+body.active3 #equals:hover {
+    background-color: hsl(177, 92%, 70%);
+}
+
+/***************  MEDIA QUERY ***************/
+/***************  MEDIA QUERY ***************/
+/***************  MEDIA QUERY ***************/
+
+@media(max-width: 460px){
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 350px;
+    }
+
+    .calculator {
+        display: grid;
+        grid-template-columns: 80px 80px 80px 80px;
+        grid-template-rows: 80px 80px 80px 80px 80px;
+        padding: 15px;  
+    }
+
+    .box {
+        padding-top: 20px;
+    }
+
+    #reset, #equals {
+        width: 140px;
+    }
+
+    #reset, #equals, #del {
+        padding-top: 20px;
+    }
+
+    .top {
+        position: relative;
+    }
+
+    .theme {
+        position: absolute;
+        left: 80%;
+    }
+
+    .theme-text {
+        margin: 20px 80px;
+    }
+}
